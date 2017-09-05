@@ -5,7 +5,7 @@
 **Kraken Group === SCAPE THE KRAKEN!**
 
 **Integrantes:**
-* Aldo "Turista" Donisete (*Abandonou o barco no meio do caminho*)
+* ~~Aldo "Turista" Donisete~~ (*Abandonou o barco no meio do caminho*)
 * Bruno "JapaTarado" Yuske 
 * Julio "Lindão" Cesar 
 * Tiago Carapinheiro 
