@@ -3,9 +3,11 @@
 ## Índice:
 * [O projeto](#o-projeto)
 * [O Grupo](#o-grupo)
----
+
 * [Conteúdos externos](#conteúdos-externos)
   * [Conteúdos externos](#projeto-krakengame)
+
+
 ## O projeto:
 **RoboCUP FIAP 2017**
 
