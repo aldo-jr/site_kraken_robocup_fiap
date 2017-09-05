@@ -1,7 +1,15 @@
 # "# Release the kraken!"
 
+## Índice:
+* [O projeto](#o-projeto)
+* [O Grupo](#o-grupo)
+---
+* [Conteúdos externos](#conteúdos-externos)
+  * [Conteúdos externos](#projeto-krakengame)
 ## O projeto:
-### RoboCUP FIAP 2017
+**RoboCUP FIAP 2017**
+
+## O grupo:
 **Kraken Group === SCAPE THE KRAKEN!**
 
 **Integrantes:**
