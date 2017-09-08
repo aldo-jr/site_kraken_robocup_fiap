@@ -21,8 +21,8 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">Robocup </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="<?php echo HOME_URI;?>/o-que-e/">O que é</a>
-                        <a class="dropdown-item" href="<?php echo HOME_URI;?>/regulamento/">Regulamento</a>
+                        <a class="dropdown-item" href="<?php echo HOME_URI;?>/robocup/sobre/">O que é</a>
+                        <a class="dropdown-item" href="<?php echo HOME_URI;?>/robocup/regulamento/">Regulamento</a>
                     </div>
                 </li>
 
@@ -47,7 +47,7 @@
 
                 <!-- @TODO criar página e alterar link-->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link" href="<?php echo HOME_URI;?>/contato/">Contato</a>
                 </li>
             </ul>
 

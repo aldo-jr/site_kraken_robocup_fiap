@@ -3,16 +3,8 @@
 
 <div class="container">
     <div class="jumbotron text-center">
-        <h1>{{TITLE}}</h1>
+        <h1><?php echo $this->title; ?></h1>
     </div>
-</div>
-
-<div class="container sr-only">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active">Data</li>
-    </ol>
 </div>
 
 <div class="container">
