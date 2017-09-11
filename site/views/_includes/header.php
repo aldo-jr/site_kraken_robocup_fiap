@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="<?php echo HOME_URI;?>/views/_css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo HOME_URI;?>/views/_css/style.css">
+    <link rel="stylesheet" href="<?php echo HOME_URI;?>/views/_css/style.min.css">
 
 	<title><?php echo $this->title; ?></title>
 </head>

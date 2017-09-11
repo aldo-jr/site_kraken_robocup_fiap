@@ -34,7 +34,7 @@ $lista = $modelo->listar_noticias();
 		
 		<p>
 			<img src="<?php 
-			echo HOME_URI . '/views/_uploads/' . $noticia['noticia_imagem']; ?>">
+			echo HOME_URI . '/../_uploads/' . $noticia['noticia_imagem']; ?>">
 		</p>
 		
 		<?php echo $noticia['noticia_texto'];?>

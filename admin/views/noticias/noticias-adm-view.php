@@ -63,6 +63,14 @@ $modelo->sem_limite = true;
 					?>" />
 				</td>
 			</tr>
+      <tr>
+        <td>
+          Ativo: <br>
+          <input type="text" name="noticia_ativo" value="<?php
+          echo htmlentities( chk_array( $modelo->form_data, 'noticia_ativo') );
+	        ?>" />
+        </td>
+      </tr>
 			<tr>
 				<td>
 					Texto da notícia: <br>

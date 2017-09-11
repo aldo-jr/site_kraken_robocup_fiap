@@ -7,7 +7,7 @@
 define( 'ABSPATH', dirname( __FILE__ ) );
 
 // Caminho para a pasta de uploads
-define( 'UP_ABSPATH', ABSPATH . '/views/_uploads' );
+define( 'UP_ABSPATH', ABSPATH . '/../_uploads' );
 
 // URL da home
 define( 'HOME_URI', 'http://127.0.0.1/fiap/site_kraken_robocup_fiap/admin' );
