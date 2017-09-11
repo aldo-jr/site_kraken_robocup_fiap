@@ -28,3 +28,7 @@
 #### Projeto `krakengame`
 * **Criador**: [Tiago Carapinheiro (Carapcoder)](https://github.com/Carapcoder)
 * **Url do projeto**: [https://github.com/Carapcoder/krakengame](https://github.com/Carapcoder/krakengame)
+* **Obs**: Modificações para funcionalidade:
+  * Path de arquivos (imagens e audios);
+  * Adição do Bootstrap, e suas depêndencias;
+  * Adição da barra de menu do projeto Site Kraken Robocup Fiap.
