@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS `site_kraken` CHARACTER SET utf8;
 
 CREATE TABLE IF NOT EXISTS `site_kraken`.`noticias` (
   `noticia_id` INT (11) NOT NULL AUTO_INCREMENT,
-  `noticia_data` DATETIME DEFAULT '0000-00-00 00:00:00',
+  `noticia_data` DATETIME DEFAULT CURRENT_TIMESTAMP,
   `noticia_autor` VARCHAR (255),
   `noticia_titulo` VARCHAR (255),
   `noticia_texto` TEXT,
