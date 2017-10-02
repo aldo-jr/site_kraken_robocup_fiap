@@ -10,19 +10,19 @@ define( 'ABSPATH', dirname( __FILE__ ) );
 define( 'UP_ABSPATH', ABSPATH . '/../_uploads' );
 
 // URL da home
-define( 'HOME_URI', 'http://127.0.0.1/fiap/site_kraken_robocup_fiap/admin' );
+define( 'HOME_URI', 'http://localhost:8082/site' );
 
 // Nome do host da base de dados
-define( 'HOSTNAME', 'localhost' );
+define( 'HOSTNAME', 'db' );
 
 // Nome do DB
 define( 'DB_NAME', 'site_kraken' );
 
 // Usuário do DB
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'kraken' );
 
 // Senha do DB
-define( 'DB_PASSWORD', 'aldo1234' );
+define( 'DB_PASSWORD', 'kraken2017' );
 
 // Charset da conexão PDO
 define( 'DB_CHARSET', 'utf8' );

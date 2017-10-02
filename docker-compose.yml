@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: site_kraken
+      MYSQL_USER: kraken
+      MYSQL_PASSWORD: kraken2017
+
+  php:
+    build: ./php
+    volumes:
+      - "./src/:/var/www/html/"
+    ports:
+      - 8082:80
+    links:
+      - db
