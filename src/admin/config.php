@@ -19,10 +19,10 @@ define( 'HOSTNAME', 'db' );
 define( 'DB_NAME', 'site_kraken' );
 
 // Usuário do DB
-define( 'DB_USER', 'kraken' );
+define( 'DB_USER', 'root' );
 
 // Senha do DB
-define( 'DB_PASSWORD', 'kraken2017' );
+define( 'DB_PASSWORD', 'root' );
 
 // Charset da conexão PDO
 define( 'DB_CHARSET', 'utf8' );

@@ -1,10 +1,10 @@
 <?php
 $servername = "db";
-$username = "kraken";
-$password = "kraken2017";
+$username = "root";
+$password = "root";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, 'site_kraken');
 
 // Check connection
 if ($conn->connect_error) {

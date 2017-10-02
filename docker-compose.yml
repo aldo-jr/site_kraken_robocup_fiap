@@ -5,9 +5,6 @@ services:
     build: ./mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: site_kraken
-      MYSQL_USER: kraken
-      MYSQL_PASSWORD: kraken2017
 
   php:
     build: ./php
