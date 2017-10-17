@@ -12,18 +12,13 @@
 <!--<![endif]-->
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-	<link rel="stylesheet" href="<?php echo HOME_URI;?>/views/_css/style.css">
+  <link rel="stylesheet" href="<?php echo HOME_URI;?>/views/_css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo HOME_URI;?>/views/_css/style.min.css">
 
-    <!--[if lt IE 9]>
-    <script src="<?php echo HOME_URI;?>/views/_js/scripts.js"></script>
-    <![endif]-->
-
-	<title><?php echo $this->title; ?></title>
+  <title><?php echo $this->title; ?></title>
 </head>
 <body>
-
-<div class="main-page">

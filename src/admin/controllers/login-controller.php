@@ -24,9 +24,7 @@ class LoginController extends MainController
 		
 		// /views/_includes/header.php
         require ABSPATH . '/views/_includes/header.php';
-		
-		// /views/_includes/menu.php
-        require ABSPATH . '/views/_includes/menu.php';
+
 		
 		// /views/home/login-view.php
         require ABSPATH . '/views/login/login-view.php';

@@ -229,7 +229,7 @@ class UserLogin
 	/**
 	 * Logout
 	 *
-	 * Desconfigura tudo do usuárui.
+	 * Desconfigura tudo do usuáruo.
 	 *
 	 * @param bool $redirect Se verdadeiro, redireciona para a página de login
 	 * @final
@@ -298,10 +298,7 @@ class UserLogin
 	 * @param array $user_permissions As permissões do usuário
 	 * @final
 	 */
-	final protected function check_permissions( 
-		$required = 'any', 
-		$user_permissions = array('any')
-	) {
+	final protected function check_permissions( $required = 'any', $user_permissions = array('any') ) {
 		if ( ! is_array( $user_permissions ) ) {
 			return;
 		}
