@@ -44,7 +44,7 @@ class HomeController extends MainController
 		// Essa página não precisa de modelo (model)
 		
 		/** Carrega os arquivos do view **/
-		
+
 		// /views/_includes/header.php
         require ABSPATH . '/views/_includes/header.php';
 		

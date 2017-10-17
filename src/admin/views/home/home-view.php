@@ -1,6 +1,5 @@
 <?php if ( ! defined('ABSPATH')) exit; ?>
 
-
 <div class="container">
 
   <div class="jumbotron text-center">

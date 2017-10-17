@@ -6,8 +6,11 @@
 // Caminho para a raiz
 define( 'ABSPATH', dirname( __FILE__ ) );
 
-// Caminho para a pasta de uploads
-define( 'UP_ABSPATH', ABSPATH . '/../_uploads' );
+// Configurações da AWS
+define( 'S3_ASSETS_BUCKET', getenv("S3_ASSETS_BUCKET"));
+define( 'S3_ASSETS_REGION', getenv("S3_ASSETS_REGION"));
+define( 'S3_ACCESS_KEY', getenv("S3_ACCESS_KEY"));
+define( 'S3_SECRET_KEY', getenv("S3_SECRET_KEY"));
 
 // URL da home
 define( 'HOME_URI', getenv("HOME_URI") ? getenv("HOME_URI").'/admin' : 'http://localhost:8082/admin' );

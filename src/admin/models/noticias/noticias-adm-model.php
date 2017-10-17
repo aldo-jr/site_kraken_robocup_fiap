@@ -5,6 +5,9 @@
  * @package TutsupMVC
  * @since 0.1
  */
+use Aws\S3\S3Client;
+use Aws\S3\MultipartUploader;
+use Aws\Exception\MultipartUploadException;
 class NoticiasAdmModel extends MainModel
 {
 
@@ -303,34 +306,58 @@ class NoticiasAdmModel extends MainModel
 		$tmp_imagem     = $imagem['tmp_name'];
 		$erro_imagem    = $imagem['error'];
 		$tamanho_imagem = $imagem['size'];
-		
+
 		// Os mime types permitidos
 		$permitir_tipos  = array(
 			'image/bmp',
 			'image/x-windows-bmp',
 			'image/gif',
+			'image/GIF',
+			'image/jpg',
+			'image/JPG',
 			'image/jpeg',
+			'image/JPEG',
 			'image/pjpeg',
 			'image/png',
+			'image/PNG',
 		);
-		
+
 		// Verifica se o mimetype enviado é permitido
 		if ( ! in_array( $tipo_imagem, $permitir_tipos ) ) {
 			// Retorna uma mensagem
 			$this->form_msg = '<p class="error">Você deve enviar uma imagem.</p>';
 			return;
 		}
-		
+
 		// Tenta mover o arquivo enviado
-		if ( ! move_uploaded_file( $tmp_imagem, UP_ABSPATH . '/' . $nome_imagem ) ) {
-			// Retorna uma mensagem
-			$this->form_msg = '<p class="error">Erro ao enviar imagem.</p>';
+		$bucket = S3_ASSETS_BUCKET;
+
+		$client = new S3Client([
+			'region'      => S3_ASSETS_REGION,
+			'version'     => 'latest',
+			'credentials' => [
+				'key'    => S3_ACCESS_KEY,
+				'secret' => S3_SECRET_KEY,
+			],
+		]);
+
+		$uploader = new MultipartUploader($client, $tmp_imagem, [
+			'bucket' => $bucket,
+			'key'    => $nome_imagem,
+
+		]);
+
+		try {
+			$result = $uploader->upload();
+			// Retorna a url da imagem do s3
+			return $result['ObjectURL'];
+		} catch (MultipartUploadException $e) {
+			$this->form_msg = $e->getMessage() . "\n";
 			return;
 		}
-		
-		// Retorna o nome da imagem
-		return $nome_imagem;
-		
+
+
+
 	} // upload_imagem
 	
 	/**

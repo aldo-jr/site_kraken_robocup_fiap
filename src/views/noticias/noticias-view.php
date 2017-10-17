@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </p>
 
       <p>
-        <img src="<?php echo UP_URI . '/' . $noticia['noticia_imagem']; ?>">
+        <img src="<?php echo $noticia['noticia_imagem']; ?>">
       </p>
 
 			<?php echo $noticia['noticia_texto']; ?>

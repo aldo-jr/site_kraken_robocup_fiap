@@ -66,10 +66,13 @@ class NoticiasController extends MainController {
 			return;
 		}
 
+
 		// Carrega o modelo para este view
 		$modelo = $this->load_model( 'noticias/noticias-adm-model' );
 
 		/** Carrega os arquivos do view **/
+		// /_dependencies/vendor/autoload.php
+		require ABSPATH . '/views/_dependencies/vendor/autoload.php';
 
 		// /views/_includes/header.php
 		require ABSPATH . '/views/_includes/header.php';
