@@ -132,19 +132,7 @@ class NoticiasAdmModel extends MainModel
 		
 			// Remove o campo insere_notica para não gerar problema com o PDO
 			unset($_POST['insere_noticia']);
-			
-			// Verifica se a data foi enviada
-			$data = chk_array( $_POST, 'noticia_data' );
-			
-			/*
-			Inverte a data para os formatos dd-mm-aaaa hh:mm:ss
-			ou aaaa-mm-dd hh:mm:ss
-			*/
-			$nova_data = $this->inverte_data( $data );
-			
-			// Adiciona a data no $_POST		
-			$_POST['noticia_data'] = $nova_data;
-			
+
 			// Tenta enviar a imagem
 			$imagem = $this->upload_imagem();
 			
@@ -218,6 +206,7 @@ class NoticiasAdmModel extends MainModel
 		
 		// Verifica se a imagem foi enviada
 		if ( ! $imagem ) {
+			$this->form_msg = '<p class="error">Erro ao fazer o upload da imagem!</p>';
 			return;		
 		}
 		
@@ -226,14 +215,7 @@ class NoticiasAdmModel extends MainModel
 		
 		// Insere a imagem em $_POST
 		$_POST['noticia_imagem'] = $imagem;
-		
-		// Configura a data
-		$data = chk_array( $_POST, 'noticia_data' );
-		$nova_data = $this->inverte_data( $data );
-					
-		// Adiciona a data no POST
-		$_POST['noticia_data'] = $nova_data;
-		
+
 		// Insere os dados na base de dados
 		$query = $this->db->insert( 'noticias', $_POST );
 		
@@ -314,7 +296,7 @@ class NoticiasAdmModel extends MainModel
 		$ext_imagem     = explode( '.', $nome_imagem );
 		$ext_imagem     = end( $ext_imagem );
 		$nome_imagem    = preg_replace( '/[^a-zA-Z0-9]/', '', $nome_imagem);
-		$nome_imagem   .= '_' . mt_rand() . '.' . $ext_imagem;
+		$nome_imagem   .= '_' . date('YmdHis') . '.' . $ext_imagem;
 		
 		// Tipo, nome temporário, erro e tamanho
 		$tipo_imagem    = $imagem['type'];

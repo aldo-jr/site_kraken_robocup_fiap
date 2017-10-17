@@ -262,11 +262,6 @@ class UserRegisterModel
 		// Verifica se existe o parâmetro "del" na URL
 		if ( chk_array( $parametros, 0 ) == 'del' ) {
 
-			// Mostra uma mensagem de confirmação
-			echo '<p class="alert">Tem certeza que deseja apagar este valor?</p>';
-			echo '<p><a href="' . $_SERVER['REQUEST_URI'] . '/confirma">Sim</a> | 
-			<a href="' . HOME_URI . '/user-register">Não</a> </p>';
-			
 			// Verifica se o valor do parâmetro é um número
 			if ( 
 				is_numeric( chk_array( $parametros, 1 ) )

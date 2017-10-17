@@ -1,11 +1,10 @@
 <?php if ( ! defined('ABSPATH')) exit; ?>
 
 
-<div class="wrap">
+<div class="container">
 
-	<p>Olá, <br>
-	Se você está visualizando esta página, seu sistema PHP com padrão MVC está funcionando.</p>
+  <div class="jumbotron text-center">
+    <h1>Painel Admin</h1>
+  </div>
 
-	<p>Não deixe de visitar nosso site para dicas <a href="http://www.tutsup.com">tutsup.com</a>.
-
-</div> <!-- .wrap -->
+</div>

@@ -19,14 +19,13 @@ if ( $this->logged_in ) {
 </style>
 <div class="d-flex align-items-center login_page" style="height:100%;">
   <div class="card card-container">
-    <?php
-    if ( $this->login_error ) {
-      echo '<tr><td colspan="2" class="error">' . $this->login_error . '</td></tr>';
-    }
-    ?>
-    <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
     <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
     <p id="profile-name" class="profile-name-card"></p>
+    <?php
+    if ( $this->login_error ) {
+      echo '<div class="alert alert-danger text-center" role="alert">' . $this->login_error . '</div>';
+    }
+    ?>
     <form class="form-signin" method="post">
       <span id="reauth-email" class="reauth-email"></span>
       <input type="text" id="inputEmail" class="form-control" placeholder="Usuário" name="userdata[user]" required autofocus>

@@ -1,13 +1,15 @@
-<?php 
+<?php
 // Evita acesso direto a este arquivo
-if ( ! defined('ABSPATH')) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 // Configura as URLs
-$adm_uri = HOME_URI . '/noticias/adm/';
-$edit_uri = $adm_uri . 'edit/';
+$adm_uri    = HOME_URI . '/noticias/adm/';
+$edit_uri   = $adm_uri . 'edit/';
 $delete_uri = $adm_uri . 'del/';
 
-		
+
 // Carrega o método para obter uma notícia
 $modelo->obtem_noticia();
 
@@ -21,100 +23,92 @@ $modelo->form_confirma = $modelo->apaga_noticia();
 $modelo->sem_limite = true;
 ?>
 
-<div class="wrap">
+<div class="container">
+  <h1 class="text-center my-4">Gerenciamento de notícias</h1>
 
-	<?php 
-	// Mensagem de configuração caso o usuário tente apagar algo
-	echo $modelo->form_confirma;
-	?>
+	<?php echo $modelo->form_msg; ?>
 
-	<!-- Formulário de edição das notícias -->
-	<form method="post" action="" enctype="multipart/form-data">
-		<table class="form-table">
-			<tr>
-				<td>
-					Título: <br>
-					<input type="text" name="noticia_titulo" value="<?php 
-					echo htmlentities( chk_array( $modelo->form_data, 'noticia_titulo') );
-					?>" />
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Imagem: <br>
-					<input type="file" name="noticia_imagem" value="" />
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Data: <br>
-					<input type="text" name="noticia_data" value="<?php 
-					$data = chk_array( $modelo->form_data, 'noticia_data');
-					if ( $data && $data != '0000-00-00 00:00:00' )
-					echo date('d-m-Y H:i:s', strtotime( $data ) );
-					?>" />
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Autor: <br>
-					<input type="text" name="noticia_autor" value="<?php 
-					echo htmlentities( $_SESSION['userdata']['user_name'] );
-					?>" />
-				</td>
-			</tr>
-      <tr>
-        <td>
-          Ativo: <br>
-          <input type="text" name="noticia_ativo" value="<?php
-          echo htmlentities( chk_array( $modelo->form_data, 'noticia_ativo') );
-	        ?>" />
-        </td>
-      </tr>
-			<tr>
-				<td>
-					Texto da notícia: <br>
-					<textarea name="noticia_texto"><?php
-					echo htmlentities( chk_array( $modelo->form_data, 'noticia_texto') );
-					?></textarea>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<?php 
-					// Mensagem de feedback para o usuário
-					echo $modelo->form_msg;
-					?>
-					<input type="submit" value="Save" />
-				</td>
-			</tr>
-		</table>
-		
-		<input type="hidden" name="insere_noticia" value="1" />
-	</form>
-	
-	<!-- LISTA AS NOTICIAS -->
+  <!-- Formulário de edição das notícias -->
+  <form method="post" action="" enctype="multipart/form-data">
+
+    <div class="form-group row">
+      <label for="noticia_titulo" class="col-sm-2 col-form-label">Título:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="noticia_titulo" name="noticia_titulo" value="<?php echo htmlentities( chk_array( $modelo->form_data, 'noticia_titulo' ) ); ?>" placeholder="Título" required />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="noticia_imagem" class="col-sm-2 col-form-label">Imagem:</label>
+      <div class="col-sm-10">
+        <input type="file" class="form-control" id="noticia_imagem" name="noticia_imagem" value="" placeholder="Imagem" />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="noticia_texto" class="col-sm-2 col-form-label">Texto da notícia:</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" id="noticia_texto" name="noticia_texto" placeholder="Texto da notícia" required ><?php echo htmlentities( chk_array( $modelo->form_data, 'noticia_texto' ) ); ?></textarea>
+      </div>
+    </div>
+
+    <input type="hidden" name="noticia_autor" value="<?php echo htmlentities( $_SESSION['userdata']['user_name'] ); ?>" />
+
+    <input type="hidden" name="insere_noticia" value="1"/>
+
+    <div class="form-group row">
+      <div class="col-sm-10 ml-auto">
+        <input type="submit" value="Salvar" class="btn btn-primary px-5"/>
+      </div>
+    </div>
+  </form>
+
+  <!-- LISTA AS NOTICIAS -->
 	<?php $lista = $modelo->listar_noticias(); ?>
 
-	<table class="list-table">
+  <h2 class="mt-5">Lista de notícias:</h2>
+  <table class="table table-responsive table-bordered">
+    <thead>
+    <tr>
+      <th>Título</th>
+      <th></th>
+    </tr>
+    </thead>
 
-		<?php foreach( $lista as $noticia ):?>
-			
-			<tr>
-				<td><?php echo $noticia['noticia_titulo']?></td>
-				<td>
-					<a href="<?php echo $edit_uri . $noticia['noticia_id']?>">
-						Editar
-					</a> 
-					
-					<a href="<?php echo $delete_uri . $noticia['noticia_id']?>">
-						Apagar
-					</a>
-				</td>
-			</tr>
-			
+    <tbody class="table-stripped">
+		<?php foreach ( $lista as $noticia ): ?>
+
+      <tr>
+        <td><?php echo $noticia['noticia_titulo'] ?></td>
+        <td>
+          <a class="btn btn-sm btn-primary" href="<?php echo $edit_uri . $noticia['noticia_id'] ?>">Editar</a>
+          <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalConfirma" data-url="<?php echo $delete_uri . $noticia['noticia_id'] ?>">Apagar</button>
+        </td>
+      </tr>
+
 		<?php endforeach; ?>
+    </tbody>
 
-	</table>
+  </table>
 
+
+  <div class="modal fade" id="modalConfirma">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Tem certeza que deseja apagar esta notícia?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Ao apagar uma notícia, não é possível restaura-la.</p>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-danger">Sim</a>
+          <button class="btn btn-secondary" data-dismiss="modal">Não</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div> <!-- .wrap -->
