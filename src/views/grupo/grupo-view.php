@@ -13,7 +13,31 @@
       <!-- Wallindo -->
       <div class="mb-5 row">
         <div class="col-md-4">
-          <img src="<?php echo HOME_URI; ?>/views/_images/p2.jpeg">
+
+          <div id="carouselWallace" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div style="background:url(<?php echo HOME_URI; ?>/views/_images/wallace1.jpeg) center / cover; height:290px; width:100%;"></div>
+              </div>
+              <div class="carousel-item">
+                <div style="background:url(<?php echo HOME_URI; ?>/views/_images/wallace2.jpeg) center / cover; height:290px; width:100%;"></div>
+              </div>
+              <div class="carousel-item">
+                <div style="background:url(<?php echo HOME_URI; ?>/views/_images/wallace3.jpeg) center / cover; height:290px; width:100%;"></div>
+              </div>
+              <div class="carousel-item">
+                <div style="background:url(<?php echo HOME_URI; ?>/views/_images/wallace4.jpeg) center / cover; height:290px; width:100%;"></div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselWallace" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselWallace" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
         <div class="col-md-8">
           <h2>Wallace Lima
@@ -76,29 +100,29 @@
           </p>
         </div>
         <div class="col-md-4">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div id="carouselBruno" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="<?php echo HOME_URI; ?>/views/_images/bruno0.jpeg">
+                <div style="background:url(<?php echo HOME_URI; ?>/views/_images/bruno0.jpeg) center / cover; height:290px; width:100%;"></div>
               </div>
               <div class="carousel-item">
-                <img src="<?php echo HOME_URI; ?>/views/_images/bruno3.jpeg">
+                <div style="background:url(<?php echo HOME_URI; ?>/views/_images/bruno3.jpeg) center / cover; height:290px; width:100%;"></div>
               </div>
               <div class="carousel-item">
-                <img src="<?php echo HOME_URI; ?>/views/_images/bruno2.jpeg">
+                <div style="background:url(<?php echo HOME_URI; ?>/views/_images/bruno2.jpeg) center / cover; height:290px; width:100%;"></div>
               </div>
               <div class="carousel-item">
-                <img src="<?php echo HOME_URI; ?>/views/_images/bruno1.jpeg">
+                <div style="background:url(<?php echo HOME_URI; ?>/views/_images/bruno1.jpeg) center / cover; height:290px; width:100%;"></div>
               </div>
               <div class="carousel-item">
-                <img src="<?php echo HOME_URI; ?>/views/_images/bruno4.jpeg">
+                <div style="background:url(<?php echo HOME_URI; ?>/views/_images/bruno4.jpeg) center / cover; height:290px; width:100%;"></div>
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselBruno" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselBruno" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
@@ -110,7 +134,7 @@
 
 
     <div class="col-md-4 text-center">
-      <img class="mt-5" src="<?php echo HOME_URI; ?>/views/_images/krakenimage2.jpg">
+      <img class="mt-5" src="<?php echo HOME_URI; ?>/views/_images/imgkraken2.jpeg" style="max-width:280px;">
     </div>
   </div>
 </div>

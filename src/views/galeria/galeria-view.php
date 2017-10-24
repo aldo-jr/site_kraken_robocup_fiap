@@ -29,7 +29,7 @@
     <div class="col-md-12">
 
       <div class="card-columns">
-        <?php for($i = 1; $i <= 16; $i++) { ?>
+        <?php for($i = 1; $i <= 25; $i++) { ?>
         <div class="card">
           <a data-toggle="modal" data-target="#galerryModal" data-title="Robo Kraken" data-image="<?php echo HOME_URI; ?>/views/_images/img<?= $i ?>.jpeg">
             <img class="card-img-top" src="<?php echo HOME_URI; ?>/views/_images/img<?= $i ?>.jpeg">

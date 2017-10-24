@@ -48,8 +48,7 @@
     </div>
 
     <div class="col-md-4 text-center">
-      <img class="mt-5" src="<?php echo HOME_URI; ?>/views/_images/krakenimage01.png" alt="">
-      <h3>Release the Kraken!</h3>
+      <img class="mt-5" src="<?php echo HOME_URI; ?>/views/_images/imgkraken1.jpeg" style="max-width:280px;">
     </div>
   </div>
 </div>
