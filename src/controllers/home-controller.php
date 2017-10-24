@@ -7,7 +7,6 @@
  */
 class HomeController extends MainController
 {
-
 	/**
 	 * Carrega a página "/views/home/index.php"
 	 */
@@ -16,10 +15,8 @@ class HomeController extends MainController
 		$this->title = 'Home';
 		
 		// Parametros da função
-		$parametros = ( func_num_args() >= 1 ) ? func_get_arg(0) : array();
-	
-		// Essa página não precisa de modelo (model)
-		
+	    $modelo = $this->load_model('noticias/noticias-adm-model');
+
 		/** Carrega os arquivos do view **/
 		
 		// /views/_includes/header.php

@@ -1,10 +1,10 @@
 version: "3.3"
 
 services:
-  db:
-    build: ./mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: root
+#  db:
+#    build: ./mysql
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
 
   php:
     build: ./php
@@ -12,5 +12,22 @@ services:
       - "./src/:/var/www/html/"
     ports:
       - 8082:80
-    links:
-      - db
+    environment:
+      HOME_URI: "http://localhost:8082"
+      #DB_HOSTNAME: "db"
+      #DB_NAME: "site_kraken"
+      #DB_USER: "root"
+      #DB_PASSWORD: "root"
+      #DB_CHARSET: "utf8"
+      DB_HOSTNAME: "site-kraken-db.cipj2uuzjnqh.sa-east-1.rds.amazonaws.com"
+      DB_NAME: "site_kraken"
+      DB_USER: "master"
+      DB_PASSWORD: "Kraken2017"
+      DB_CHARSET: "utf8"
+      SITE_DEBUG: "true"
+      S3_ASSETS_BUCKET: "assets.kraken"
+      S3_ASSETS_REGION: "sa-east-1"
+      S3_ACCESS_KEY: "AKIAJYD2CQCVBREETZAA"
+      S3_SECRET_KEY: "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"
+#    links:
+#      - db

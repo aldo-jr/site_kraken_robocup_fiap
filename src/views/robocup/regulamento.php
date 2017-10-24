@@ -32,11 +32,14 @@
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ex, commodi. Eaque eum totam omnis odio soluta beatae, laborum. Quaerat voluptas, exercitationem ea accusantium aliquam fuga dolore commodi autem placeat, nesciunt facere nostrum neque nulla ullam? Mollitia recusandae at eos nam magnam rerum quae iure necessitatibus. Ipsa vel iure nam ipsum dolor odio doloribus harum, expedita atque, placeat, voluptate laborum, ab possimus esse ducimus vitae animi. Eveniet vitae voluptatum vel impedit, repellendus asperiores distinctio consequuntur omnis incidunt facilis provident mollitia aliquam, laudantium nam quod facere similique. Est, id voluptatem dolorum aliquid voluptatum saepe inventore, ea, dolore tenetur eos vitae distinctio molestias iste cum nobis temporibus impedit doloribus. Atque soluta tenetur ab tempora vel, dolorem numquam maxime itaque libero, suscipit quis, tempore esse pariatur doloribus quos, eveniet dolor. Recusandae doloremque molestiae, eaque in similique vel laudantium minus, veritatis ipsam pariatur nulla rem quidem vitae cum cupiditate expedita aliquam consequatur voluptatibus hic ea voluptates dolore. Autem sapiente illo odit at vero voluptatum quibusdam, dignissimos doloremque impedit debitis eos incidunt, tenetur ullam neque nobis architecto eaque inventore ratione. Quidem consequatur sequi, consequuntur eligendi numquam vel dolorem voluptatum harum placeat officia adipisci ut possimus sunt officiis, repellat autem facilis in soluta architecto sint? Facere sapiente neque quod minus perferendis! Ipsam recusandae hic maxime blanditiis asperiores consectetur dolores, beatae odio aliquam nam accusamus illum dolorum, doloremque obcaecati facere ducimus nobis debitis! Incidunt temporibus labore eveniet reiciendis, accusantium totam ea odit adipisci explicabo placeat! Quia aspernatur odit ut non omnis esse possimus, dignissimos, deserunt illum velit sunt architecto accusamus ipsa, ab repellat tenetur optio, cumque vitae fugit doloremque doloribus ipsam! Necessitatibus recusandae aliquam animi iusto quidem fuga, voluptate nihil vel, eos maxime, cupiditate ipsam obcaecati voluptas repellendus labore? Neque quasi nostrum hic minima magni earum veritatis dolorum ullam soluta ea. Molestias laudantium repellendus modi voluptates, nam.
 			</p>
-			<a href="">Conheça nosso grupo >></a>
+
+      <a href="<?php echo HOME_URI;?>/grupo/">Conheça nosso grupo >></a>
 
 		</div>
 
-
-	</div>
+    <div class="col-md-4 text-center">
+      <img class="mt-5" src="<?php echo HOME_URI;?>/views/_images/robocup.jpeg" alt="">
+    </div>
+  </div>
 </div>
 

@@ -389,16 +389,20 @@ class NoticiasAdmModel extends MainModel
 		
 		// Página atual
 		$current = $this->parametros[1] ? $this->parametros[1] : 1;
-		
+
+		echo '<nav aria-label="Page navigation example"> <ul class="pagination justify-content-center">';
+
+
 		// Exibe a primeira página e reticências no início
 		if ( $current > 4 ) {
-			echo "<a href='$caminho_noticias$first'>$first</a> ... ";
+
+			echo "<li class='page-item'><a class='page-link' href='$caminho_noticias$first'>$first</a></li><li class='page-item'>...</li>";
 		}
 		
 		// O primeiro loop toma conta da parte esquerda dos números
 		for ( $i = ( $current - $offset1 ); $i < $current; $i++ ) {
 			if ( $i > 0 ) {
-				echo "<a href='$caminho_noticias$i'>$i</a>";
+				echo "<li class='page-item'><a class='page-link' href='$caminho_noticias$i'>$i</a></li>";
 				
 				// Diminiu o offset do segundo loop
 				$offset2--;
@@ -409,15 +413,18 @@ class NoticiasAdmModel extends MainModel
 		// Obs.: A primeira expressão realmente não é necessária
 		for ( ; $i < $current + $offset2; $i++ ) {
 			if ( $i <= $last ) {
-				echo "<a href='$caminho_noticias$i'>$i</a>";
+				$active = "";
+				if($i == $current) $active = "active";
+				echo "<li class='page-item $active '><a class='page-link' href='$caminho_noticias$i'>$i</a></li>";
 			}
 		}
 		
 		// Exibe reticências e a última página no final
-		if ( $current <= ( $last - $offset1 ) ) {
-			echo " ... <a href='$caminho_noticias$last'>$last</a>";
+		if ( $current <= ( $last - $offset2 ) ) {
+			echo "<li class='page-item'>...</li><li class='page-item'><a class='page-link' href='$caminho_noticias$last'>$last</a></li>";
 		}
 
+		echo '</ul></nav>';
 	} // paginacao
 	
 } // NoticiasAdmModel
